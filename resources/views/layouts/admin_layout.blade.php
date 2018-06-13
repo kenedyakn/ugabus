@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/admin_inc/assets/img/basic/favicon.ico" type="image/x-icon">
-    <title>Paper</title>
+    <title>UgaBus:Admin</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/admin_inc/assets/css/app.css">
     <style>
