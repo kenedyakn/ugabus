@@ -50,4 +50,16 @@ class AdminLoginController extends Controller
 
     }
 
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+        flash('Logout successful')->success();
+        return redirect(route('admin.login'));
+
+    }
+
 }

@@ -8,12 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
-    protected function guard()
-    {
-        return Auth::guard('admin');
-    }
-
     function index(){
-        return "You are in the admin dashboard";
+        return view('admin.dashboard');
     }
 }
