@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
     return view('user.index');
 });
@@ -42,6 +44,13 @@ Route::group(['middleware' => 'agent'], function () {
 
 //Admin routes
 Route::group(['middleware' => 'admin'], function () {
-
+    Route::get('admin','Admin\DashboardController@index')->name('admin.dashboard');
 });
+
+//Admin authentication
+Route::get('/admin/login', function(){
+    return view('admin.login');
+});
+
+Route::post('/admin/login', 'Admin\AdminLoginController@login');
 
