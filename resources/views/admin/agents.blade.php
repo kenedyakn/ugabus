@@ -46,9 +46,9 @@
                                                             class="custom-control-label" for="checkedAll"></label>
                                                 </div>
                                             </th>
-                                            <th>USER NAME</th>
-                                            <th>ITEMS</th>
-                                            <th>INCOME</th>
+                                            <th>FULL NAME</th>
+                                            <th>COMPANY</th>
+                                            <th>MOBILE</th>
                                             <th>PHONE</th>
                                             <th>STATUS</th>
                                             <th>ROLE</th>
@@ -58,348 +58,42 @@
 
                                         <tbody>
 
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_1" required><label
-                                                            class="custom-control-label" for="user_id_1"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <span class="avatar-letter avatar-letter-a  avatar-md circle"></span>
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
+                                        @foreach($agents as $agent)
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input checkSingle"
+                                                               id="user_id_{{$agent->id}}" required><label
+                                                                class="custom-control-label" for="user_id_{{$agent->id}}"></label>
                                                     </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
+                                                </td>
 
-                                            <td>2</td>
-                                            <td>256</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-warning"></span>
-                                                Inactive
-                                            </td>
-                                            <td><span class="r-3 badge badge-success ">Administrator</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_2" required><label
-                                                            class="custom-control-label" for="user_id_2"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <span class="avatar-letter avatar-letter-b  avatar-md circle"></span>
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Blexander Pierce</strong>
+                                                <td>
+                                                    <div class="avatar avatar-md mr-3 mt-1 float-left">
+                                                        <span class="avatar-letter avatar-letter-a  avatar-md circle"></span>
                                                     </div>
-                                                    <small> blexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>9,500</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-warning"></span>
-                                                Inactive
-                                            </td>
-                                            <td><span class="r-3 badge badge-warning">Subscriber</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_3" required><label
-                                                            class="custom-control-label" for="user_id_3"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <span class="avatar-letter avatar-letter-m  avatar-md circle"></span>
-                                                </div>
-                                                <div>
                                                     <div>
-                                                        <strong>Mlexander Pierce</strong>
+                                                        <div>
+                                                            <strong>{{$agent->first_name}} {{$agent->last_name}}</strong>
+                                                        </div>
+                                                        <small> {{$agent->email}}</small>
                                                     </div>
-                                                    <small>mlexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
+                                                </td>
 
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
+                                                <td>{{$agent->company}}</td>
+                                                <td>{{$agent->mobile}}</td>
 
-                                            <td><span class="r-3 badge badge-warning">Seller</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_4" required><label
-                                                            class="custom-control-label" for="user_id_4"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <span class="avatar-letter avatar-letter-y  avatar-md circle"></span>
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Ylexander Pierce</strong>
-                                                    </div>
-                                                    <small>Ylexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-danger"></span>
-                                                Suspended
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_5" required><label
-                                                            class="custom-control-label" for="user_id_5"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <img src="/admin_inc/assets/img/dummy/u5.png" alt="">
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
-                                                    </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-warning">Seller</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_6" required><label
-                                                            class="custom-control-label" for="user_id_6"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <span class="avatar-letter avatar-letter-p  avatar-md circle"></span>
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Plexander Pierce</strong>
-                                                    </div>
-                                                    <small>plexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_7" required><label
-                                                            class="custom-control-label" for="user_id_7"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <img src="/admin_inc/assets/img/dummy/u7.png" alt="">
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
-                                                    </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
-
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_8" required><label
-                                                            class="custom-control-label" for="user_id_8"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <img src="/admin_inc/assets/img/dummy/u8.png" alt="">
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
-                                                    </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-danger"></span>
-                                                Suspended
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_9" required><label
-                                                            class="custom-control-label" for="user_id_9"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <img src="/admin_inc/assets/img/dummy/u3.png" alt="">
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
-                                                    </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input checkSingle"
-                                                           id="user_id_10" required><label
-                                                            class="custom-control-label" for="user_id_10"></label>
-                                                </div>
-                                            </td>
-
-                                            <td>
-                                                <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                    <img src="/admin_inc/assets/img/dummy/u1.png" alt="">
-                                                </div>
-                                                <div>
-                                                    <div>
-                                                        <strong>Alexander Pierce</strong>
-                                                    </div>
-                                                    <small> alexander@paper.com</small>
-                                                </div>
-                                            </td>
-                                            <td>2</td>
-                                            <td>6,000</td>
-
-                                            <td>+92 333 123 136</td>
-                                            <td><span class="icon icon-circle s-12  mr-2 text-success"></span>
-                                                Active
-                                            </td>
-
-                                            <td><span class="r-3 badge badge-success">Buyer</span></td>
-                                            <td>
-                                                <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                            </td>
-                                        </tr>
-
+                                                <td>{{$agent->phone}}</td>
+                                                <td><span class="icon icon-circle s-12  mr-2 text-warning"></span>
+                                                    Inactive
+                                                </td>
+                                                <td><span class="r-3 badge badge-success ">Agent</span></td>
+                                                <td>
+                                                    <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
+                                                    <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </form>

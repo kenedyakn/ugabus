@@ -44,12 +44,20 @@ Route::group(['middleware' => 'agent'], function () {
 
 //Admin routes
 Route::group(['middleware' => 'admin'], function () {
+    //Dashboard
     Route::get('/admin','Admin\DashboardController@index')->name('admin.dashboard');
-    Route::get('/admin/buses','Admin\BusesController@getAllBuses')->name('admin.buses');
+
+    //Users
     Route::get('/admin/users','Admin\UsersController@getAllUsers')->name('admin.users');
-    Route::get('/admin/agents','Admin\AgentsController@getAllAgents')->name('admin.agents');
+
+    //Buses
     Route::get('/admin/buses/create','Admin\BusesController@createBus')->name('admin.create_new_bus');
+    Route::get('/admin/buses','Admin\BusesController@getAllBuses')->name('admin.buses');
+
+    //Agents
     Route::get('/admin/agents/create','Admin\AgentsController@createAgent')->name('admin.create_new_agent');
+    Route::post('/admin/agents/save','Admin\AgentsController@save')->name('admin.save');
+    Route::get('/admin/agents','Admin\AgentsController@getAllAgents')->name('admin.agents');
 });
 
 //Admin authentication
