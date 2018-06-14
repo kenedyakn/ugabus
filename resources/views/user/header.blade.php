@@ -20,9 +20,9 @@
 						</a>
 					@else
 					<a href="" class="transition-effect">
-						<img src="/client_inc/assets/images/google-play-badge.png" 
+						{{--<img src="/client_inc/assets/images/google-play-badge.png"
 						style="width: 140%;" class="text-left" alt="app download"></a>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--}}&nbsp;&nbsp;&nbsp;
 						<a href="{{route('user.login.register')}}" 
 						class="transition-effect">
 							<i class="fa fa-sign-out"></i>Signin

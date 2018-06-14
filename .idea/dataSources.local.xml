@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="rukera_dev@localhost" uuid="d493fdbd-e9e4-4d29-984a-aa3223a6ae6a">
+    <data-source name="dev_ugabus_db@localhost" uuid="f473c399-5a1d-4956-92c0-46184fd3ddf5">
       <database-info product="MySQL" version="5.7.22-0ubuntu18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -9,7 +9,7 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>phpmyadmin</user-name>
-      <introspection-schemas>*:rukera_dev</introspection-schemas>
+      <introspection-schemas>*:dev_ugabus_db</introspection-schemas>
     </data-source>
   </component>
 </project>

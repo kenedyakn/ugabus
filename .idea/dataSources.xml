@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="rukera_dev@localhost" uuid="d493fdbd-e9e4-4d29-984a-aa3223a6ae6a">
+    <data-source source="LOCAL" name="dev_ugabus_db@localhost" uuid="f473c399-5a1d-4956-92c0-46184fd3ddf5">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/rukera_dev</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/dev_ugabus_db</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
