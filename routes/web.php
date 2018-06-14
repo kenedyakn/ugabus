@@ -52,6 +52,7 @@ Route::group(['middleware' => 'admin'], function () {
 
     //Buses
     Route::get('/admin/buses/create','Admin\BusesController@createBus')->name('admin.create_new_bus');
+    Route::post('/admin/buses/save','Admin\BusesController@save')->name('admin.save');
     Route::get('/admin/buses','Admin\BusesController@getAllBuses')->name('admin.buses');
 
     //Agents

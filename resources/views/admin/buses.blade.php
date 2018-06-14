@@ -36,120 +36,31 @@
                             <div class="table-responsive">
                                 <table class="table table-hover ">
                                     <tbody>
-                                    <tr class="no-b">
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s1.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-success">Published</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s2.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-success">Published</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s3.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-danger">Pending</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s4.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-success">Published</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s5.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-primary">Sold Out</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="w-10">
-                                            <img src="/admin_inc/assets/img/demo/shop/s6.png" alt="">
-                                        </td>
-                                        <td>
-                                            <h6>Apple Product</h6>
-                                            <small class="text-muted">Mobile Phones</small>
-                                        </td>
-                                        <td>$250</td>
-                                        <td><span class="badge badge-warning">Low Stock</span></td>
-                                        <td>
-                                            <span><i class="icon icon-data_usage"></i> 5 days ago</span><br>
-                                            <span><i class="icon icon-timer"></i> 5 September, 2017</span>
-                                        </td>
-                                        <td>
-                                            <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
-                                                        class="icon-pencil"></i></a>
-                                        </td>
-                                    </tr>
+                                        @foreach($buses as $bus)
+                                            <tr class="no-b">
+                                                <td class="w-10">
+                                                    <img src="/bus_images/gaagaa.jpg" alt="">
+                                                </td>
+                                                <td>
+                                                    <h6>{{$bus->make}} <i>{{$bus->model}}</i></h6>
+                                                    <small class="text-muted">{{$bus->agent->company}}</small>
+                                                </td>
+                                                <td>{{$bus->license_plate_number}}</td>
+                                                <td>{{$bus->primary_color}}</td>
+                                                <td>{{$bus->secondary_color}}</td>
+                                                <td><span class="badge badge-success">Published</span></td>
+                                                <td>
+                                                    @foreach($bus->routes as $route)
+                                                        <span>{{$route->travel_from}} To {{$route->travel_to}}</span><br>
+                                                    @endforeach
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn-fab btn-fab-sm btn-primary shadow text-white"><i
+                                                                class="icon-pencil"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
