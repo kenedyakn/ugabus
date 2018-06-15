@@ -105,8 +105,6 @@
                             <a href="index.html" class="list-group-item list-group-item-action ">
                                 <i class="mr-2 icon-umbrella text-blue"></i>Profile
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="mr-2 icon-cogs text-yellow"></i>Settings</a>
-                            <a href="#" class="list-group-item list-group-item-action"><i class="mr-2 icon-security text-purple"></i>Change Password</a>
                             <a href="/admin/logout" class="list-group-item list-group-item-action"><i class="mr-2 icon-security text-purple"></i>Logout</a>
 
                         </div>
@@ -121,8 +119,17 @@
                                 class="icon icon-angle-left s-18 pull-right"></i>
                     </a>
                 </li>
+                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Agents<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/agents"><i class="icon icon-circle-o"></i>All Agents</a>
+                        </li>
+                        <li><a href="/admin/agents/create"><i class="icon icon-add"></i>Add Agent</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="treeview"><a href="#">
-                        <i class="icon icon icon-package blue-text s-18"></i>
+                        <i class="icon icon icon-bus blue-text s-18"></i>
                         <span>Buses</span>
                         <span class="badge r-3 badge-primary pull-right">4</span>
                     </a>
@@ -134,36 +141,86 @@
                         </li>
                     </ul>
                 </li>
-                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Agents<i
-                                class="icon icon-angle-left s-18 pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="/admin/agents"><i class="icon icon-circle-o"></i>All Agents</a>
-                        </li>
-                        <li><a href="/admin/agents/create"><i class="icon icon-add"></i>Add Agent</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Users<i
-                                class="icon icon-angle-left s-18 pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="/admin/users"><i class="icon icon-circle-o"></i>All Users</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Bookings<i
+                <li class="treeview"><a href="#"><i class="icon icon-book-bookmark light-green-text s-18"></i>Bookings<i
                                 class="icon icon-angle-left s-18 pull-right"></i></a>
                     <ul class="treeview-menu">
                         <li><a href="/admin/bookings"><i class="icon icon-circle-o"></i>All Bookings</a>
                         </li>
                     </ul>
                 </li>
-                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Routes<i
+                <li class="treeview"><a href="#"><i class="icon icon-road text-red s-18"></i>Routes<i
                                 class="icon icon-angle-left s-18 pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/bookings"><i class="icon icon-circle-o"></i>All Routes</a>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>All Routes</a>
                         </li>
                     </ul>
                 </li>
+                <li class="treeview"><a href="#"><i class="icon icon-local_parking text-black s-18"></i>Parks<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/parks"><i class="icon icon-circle-o"></i>All Parks</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="icon icon-user light-green-text s-18"></i>Users<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/users"><i class="icon icon-circle-o"></i>All Users</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="icon icon-accessibility text-danger s-18"></i>Staff Users<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/users"><i class="icon icon-circle-o"></i>All Staffs</a>
+                        </li>
+                    </ul>
+                </li>
+                {{--<li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Payments<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>All Payments</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Payment Methods</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>User Stories<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>All Stories</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Published Stories</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Unpublished Stories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>News Letters<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>All Letters</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Compose News Letter</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Sent News Letters</a>
+                        </li>
+                        <li><a href="/admin/routes"><i class="icon icon-circle-o"></i>Pending News Letters</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="treeview no-b"><a href="#">
+                        <i class="icon icon-package light-green-text s-18"></i>
+                        <span>Inbox</span>
+                        <span class="badge r-3 badge-success pull-right">20</span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="panel-page-inbox.html"><i class="icon icon-circle-o"></i>All Messages</a>
+                        </li>
+                        <li><a href="panel-page-inbox-create.html"><i class="icon icon-add"></i>Compose</a>
+                        </li>
+                    </ul>
+                </li>--}}
             </ul>
         </section>
     </aside>

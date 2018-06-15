@@ -63,6 +63,12 @@ Route::group(['middleware' => 'admin'], function () {
     //Bookings
     Route::get('/admin/bookings','Admin\BookingsController@getAllBookings')->name('admin.bookings');
 
+    //Routes
+    Route::get('/admin/routes','Admin\RoutesController@getAllRoutes')->name('admin.routes');
+
+    //Parks
+    Route::get('/admin/parks','Admin\ParksController@getAllParks')->name('admin.parks');
+
 
 });
 
