@@ -150,15 +150,17 @@
                         </li>
                     </ul>
                 </li>
-                <li class="treeview no-b"><a href="#">
-                        <i class="icon icon-package light-green-text s-18"></i>
-                        <span>Inbox</span>
-                        <span class="badge r-3 badge-success pull-right">20</span>
-                    </a>
+                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Bookings<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="panel-page-inbox.html"><i class="icon icon-circle-o"></i>All Messages</a>
+                        <li><a href="/admin/bookings"><i class="icon icon-circle-o"></i>All Bookings</a>
                         </li>
-                        <li><a href="panel-page-inbox-create.html"><i class="icon icon-add"></i>Compose</a>
+                    </ul>
+                </li>
+                <li class="treeview"><a href="#"><i class="icon icon-account_box light-green-text s-18"></i>Routes<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/admin/bookings"><i class="icon icon-circle-o"></i>All Routes</a>
                         </li>
                     </ul>
                 </li>

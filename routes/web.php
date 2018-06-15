@@ -59,6 +59,11 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/agents/create','Admin\AgentsController@createAgent')->name('admin.create_new_agent');
     Route::post('/admin/agents/save','Admin\AgentsController@save')->name('admin.save');
     Route::get('/admin/agents','Admin\AgentsController@getAllAgents')->name('admin.agents');
+
+    //Bookings
+    Route::get('/admin/bookings','Admin\BookingsController@getAllBookings')->name('admin.bookings');
+
+
 });
 
 //Admin authentication
