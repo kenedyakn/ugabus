@@ -128,10 +128,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="treeview"><a href="#">
-                        <i class="icon icon icon-bus blue-text s-18"></i>
-                        <span>Buses</span>
-                        <span class="badge r-3 badge-primary pull-right">4</span>
+                <li class="treeview"><a href="#"><i class="icon icon-bus text-blue s-18"></i>Bus<i
+                                class="icon icon-angle-left s-18 pull-right"></i></a>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/admin/buses"><i class="icon icon-circle-o"></i>All Buses</a>
@@ -172,7 +170,9 @@
                 <li class="treeview"><a href="#"><i class="icon icon-accessibility text-danger s-18"></i>Staff Users<i
                                 class="icon icon-angle-left s-18 pull-right"></i></a>
                     <ul class="treeview-menu">
-                        <li><a href="/admin/users"><i class="icon icon-circle-o"></i>All Staffs</a>
+                        <li><a href="/admin/staff"><i class="icon icon-circle-o"></i>All Staffs</a>
+                        </li>
+                        <li><a href="/admin/staff/create"><i class="icon icon-add"></i>Add Staff</a>
                         </li>
                     </ul>
                 </li>

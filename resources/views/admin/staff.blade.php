@@ -9,19 +9,19 @@
                 <div class="col">
                     <h4>
                         <i class="icon-database"></i>
-                        Agents
+                        Staff Users
                     </h4>
                 </div>
             </div>
             <div class="row justify-content-between">
                 <ul class="nav nav-material nav-material-white responsive-tab" id="v-pills-tab" role="tablist">
                     <li>
-                        <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all"
-                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>All Users</a>
+                        <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="/admin/staff"
+                           role="tab" aria-controls="v-pills-all"><i class="icon icon-home2"></i>All Staff</a>
                     </li>
                     <li class="float-right">
-                        <a class="nav-link" href="/admin/agents/create"><i
-                                    class="icon icon-plus-circle"></i> Add New User</a>
+                        <a class="nav-link" href="/admin/staff/create"><i
+                                    class="icon icon-plus-circle"></i> Add New Staff User</a>
                     </li>
                 </ul>
             </div>
@@ -47,8 +47,7 @@
                                                 </div>
                                             </th>
                                             <th>FULL NAME</th>
-                                            <th>COMPANY</th>
-                                            <th>MOBILE</th>
+                                            <th>GENDER</th>
                                             <th>PHONE</th>
                                             <th>STATUS</th>
                                             <th>ROLE</th>
@@ -57,43 +56,39 @@
                                         </thead>
 
                                         <tbody>
+                                            @foreach($staff as $user)
 
-                                        @foreach($agents as $agent)
-                                            <tr>
-                                                <td>
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input checkSingle"
-                                                               id="user_id_{{$agent->id}}" required><label
-                                                                class="custom-control-label" for="user_id_{{$agent->id}}"></label>
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="avatar avatar-md mr-3 mt-1 float-left">
-                                                        <span class="avatar-letter avatar-letter-a  avatar-md circle"></span>
-                                                    </div>
-                                                    <div>
-                                                        <div>
-                                                            <strong>{{$agent->first_name}} {{$agent->last_name}}</strong>
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input checkSingle"
+                                                                   id="user_id_1" required><label
+                                                                    class="custom-control-label" for="user_id_1"></label>
                                                         </div>
-                                                        <small> {{$agent->email}}</small>
-                                                    </div>
-                                                </td>
+                                                    </td>
 
-                                                <td>{{$agent->company}}</td>
-                                                <td>{{$agent->mobile}}</td>
+                                                    <td>
+                                                        <div class="avatar avatar-md mr-3 mt-1 float-left">
+                                                            <span class="avatar-letter avatar-letter-a  avatar-md circle"></span>
+                                                        </div>
+                                                        <div>
+                                                            <div>
+                                                                <strong>{{$user->first_name}} {{$user->last_name}}</strong>
+                                                            </div>
+                                                            <small> {{$user->email}}</small>
+                                                        </div>
+                                                    </td>
 
-                                                <td>{{$agent->phone}}</td>
-                                                <td><span class="icon icon-circle s-12  mr-2 text-warning"></span>
-                                                    Inactive
-                                                </td>
-                                                <td><span class="r-3 badge badge-success ">Agent</span></td>
-                                                <td>
-                                                    <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
-                                                    <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                                    <td>{{$user->gender}}</td>
+                                                    <td>{{$user->phone}}</td>
+                                                    <td><span class="r-3 badge badge-success ">Verified</span></td>
+                                                    <td><span class="r-3 badge badge-success ">Super Admin</span></td>
+                                                    <td>
+                                                        <a href="panel-page-profile.html"><i class="icon-eye mr-3"></i></a>
+                                                        <a href="panel-page-profile.html"><i class="icon-pencil"></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </form>
@@ -778,7 +773,7 @@
         </div>
     </div>
     <!--Add New Message Fab Button-->
-    <a href="/admin/agents/create"
+    <a href="/admin/staff/create"
        class="btn-fab btn-fab-md fab-right fab-right-bottom-fixed shadow btn-primary"><i
                 class="icon-add"></i></a>
 @endsection
